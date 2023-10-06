@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://lmh4qw2yuyc7"]
+
+[ext_resource type="Texture2D" uid="uid://jpm1csncqeyv" path="res://assets/enviroment/background.png" id="1_d0wp2"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_wljg2"]
+[ext_resource type="PackedScene" uid="uid://cr6fofqkwhsqr" path="res://player/player.tscn" id="2_a6mcm"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_wljg2")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d0wp2")
+expand_mode = 1
+
+[node name="AppleContainer" type="Node" parent="."]
+
+[node name="PlayerStart" type="Marker2D" parent="."]
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_a6mcm")]
+scale = Vector2(0.5, 0.5)
